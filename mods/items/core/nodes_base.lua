@@ -22,10 +22,10 @@ minetest.register_node("vinox_core:desert_stone", {
 
 minetest.register_node("vinox_core:dirt_with_grass", {
 	description = "Dirt with Grass",
-	tiles ={"default_grass.png",
+	tiles ={"grass_top.png",
 		-- a little dot on the bottom to distinguish it from dirt
-		"default_dirt.png^vinox_dirt_with_grass_bottom.png",
-		{name = "default_dirt.png^default_grass_side.png",
+		"dirt.png",
+		{name = "dirt.png^grass_side.png",
 		tileable_vertical = false}},
 	groups = {crumbly=3, soil=1},
 })
@@ -34,15 +34,15 @@ minetest.register_node("vinox_core:dirt_with_snow", {
 	description = "Dirt with Snow",
 	tiles ={"vinox_dirt_with_snow.png",
 		-- a little dot on the bottom to distinguish it from dirt
-		"default_dirt.png^vinox_dirt_with_snow_bottom.png",
-		{name = "default_dirt.png^default_snow_side.png",
+		"dirt.png^vinox_dirt_with_snow_bottom.png",
+		{name = "dirt.png^default_snow_side.png",
 		tileable_vertical = false}},
 	groups = {crumbly=3, soil=1},
 })
 
 minetest.register_node("vinox_core:dirt", {
 	description = "Dirt",
-	tiles ={"default_dirt.png"},
+	tiles ={"dirt.png"},
 	groups = {crumbly=3, soil=1},
 })
 
