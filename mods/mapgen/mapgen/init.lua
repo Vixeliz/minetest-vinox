@@ -21,7 +21,7 @@ minetest.register_alias("mapgen_apple", "vinox_core:apple")
 minetest.register_alias("mapgen_cobble", "vinox_core:cobble")
 
 -- Optional aliases for v6 (they all have fallback values in the engine)
-if minetest.settings:get_bool("devtest_v6_mapgen_aliases", false) then
+if minetest.settings:get_bool("devtest_v6_mapgen_aliases", true) then
 	minetest.register_alias("mapgen_gravel", "vinox_core:gravel")
 	minetest.register_alias("mapgen_desert_stone", "vinox_core:sandstone")
 	minetest.register_alias("mapgen_desert_sand", "vinox_core:desert_sand")
@@ -36,13 +36,13 @@ if minetest.settings:get_bool("devtest_v6_mapgen_aliases", false) then
 	minetest.register_alias("mapgen_pine_needles", "vinox_core:pine_needles")
 end
 -- Optional alias for mossycobble (should fall back to cobble)
-if minetest.settings:get_bool("devtest_dungeon_mossycobble", false) then
+if minetest.settings:get_bool("devtest_dungeon_mossycobble", true) then
 	minetest.register_alias("mapgen_mossycobble", "vinox_core:mossycobble")
 end
 -- Optional aliases for dungeon stairs (should fall back to full nodes)
-if minetest.settings:get_bool("devtest_dungeon_stairs", false) then
+if minetest.settings:get_bool("devtest_dungeon_stairs", true) then
 	minetest.register_alias("mapgen_stair_cobble", "stairs:stair_cobble")
-	if minetest.settings:get_bool("devtest_v6_mapgen_aliases", false) then
+	if minetest.settings:get_bool("devtest_v6_mapgen_aliases", true) then
 		minetest.register_alias("mapgen_stair_desert_stone", "stairs:stair_desert_stone")
 	end
 end

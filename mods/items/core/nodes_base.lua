@@ -307,12 +307,22 @@ minetest.register_node("vinox_core:lava_source", {
 	groups = {lava=3, liquid=1},
 })
 
-minetest.register_node("vinox_core:cobble", {
+minetest.register_node("vinox_core:cobblestone", {
 	description = "Cobblestone",
-	tiles ={"default_cobble.png"},
+	tiles ={"cobblestone.png"},
 	is_ground_content = false,
 	groups = {cracky=3},
 })
+
+-- Make type not inv eventually. Something like a stone cutter
+crafting.register_recipe({
+	type = "inv",
+	output = "vinox_core:cobblestone",
+	items = {
+		"vinox_core:stone 1",
+	},
+	always_known = true,
+});
 
 minetest.register_node("vinox_core:mossycobble", {
 	description = "Mossy Cobblestone",
