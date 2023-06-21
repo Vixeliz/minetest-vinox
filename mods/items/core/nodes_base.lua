@@ -58,7 +58,7 @@ minetest.register_node("vinox_core:dirt", {
 
 minetest.register_node("vinox_core:sand", {
 	description = "Sand",
-	tiles ={"default_sand.png"},
+	tiles ={"sand.png"},
 	groups = {crumbly=3},
 })
 
@@ -324,12 +324,22 @@ crafting.register_recipe({
 	always_known = true,
 });
 
-minetest.register_node("vinox_core:mossycobble", {
+minetest.register_node("vinox_core:mossy_cobblestone", {
 	description = "Mossy Cobblestone",
-	tiles ={"default_mossycobble.png"},
+	tiles ={"mossy_cobblestone.png"},
 	is_ground_content = false,
 	groups = {cracky=3},
 })
+
+crafting.register_recipe({
+	type = "inv",
+	output = "vinox_core:mossy_cobblestone",
+	items = {
+		"vinox_core:cobblestone 1",
+		"vinox_core:dirt_with_grass 1",
+	},
+	always_known = true,
+});
 
 minetest.register_node("vinox_core:apple", {
 	description = "Apple".."\n"..
