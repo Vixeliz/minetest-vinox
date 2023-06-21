@@ -59,7 +59,7 @@ minetest.register_node("vinox_core:dirt", {
 minetest.register_node("vinox_core:sand", {
 	description = "Sand",
 	tiles ={"sand.png"},
-	groups = {crumbly=3},
+	groups = {crumbly=3, falling_node = 1},
 })
 
 minetest.register_node("vinox_core:desert_sand", {
@@ -71,7 +71,7 @@ minetest.register_node("vinox_core:desert_sand", {
 minetest.register_node("vinox_core:gravel", {
 	description = "Gravel",
 	tiles ={"default_gravel.png"},
-	groups = {crumbly=2},
+	groups = {crumbly=2, falling_node = 1},
 })
 
 minetest.register_node("vinox_core:junglegrass", {
@@ -326,7 +326,11 @@ crafting.register_recipe({
 
 minetest.register_node("vinox_core:mossy_cobblestone", {
 	description = "Mossy Cobblestone",
-	tiles ={"mossy_cobblestone.png"},
+	tiles ={
+		"mossy_cobblestone_top.png",
+		"mossy_cobblestone_top.png",
+		"mossy_cobblestone.png"
+	},
 	is_ground_content = false,
 	groups = {cracky=3},
 })
