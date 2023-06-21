@@ -10,7 +10,7 @@ local LAVA_VISC = 7
 
 minetest.register_node("vinox_core:stone", {
 	description = "Stone",
-	tiles = {"default_stone.png"},
+	tiles = {"stone.png"},
 	groups = {cracky=3},
 })
 
