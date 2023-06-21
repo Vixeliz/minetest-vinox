@@ -14,11 +14,21 @@ minetest.register_node("vinox_core:stone", {
 	groups = {cracky=3},
 })
 
-minetest.register_node("vinox_core:desert_stone", {
-	description = "Desert Stone",
-	tiles = {"default_desert_stone.png"},
+minetest.register_node("vinox_core:sandstone", {
+	description = "Sand Stone",
+	tiles = {"sandstone.png"},
 	groups = {cracky=3},
 })
+
+crafting.register_recipe({
+	type = "inv",
+	output = "vinox_core:sandstone",
+	items = {
+		"vinox_core:stone 1",
+		"vinox_core:sand 1"
+	},
+	always_known = true,
+});
 
 minetest.register_node("vinox_core:dirt_with_grass", {
 	description = "Dirt with Grass",

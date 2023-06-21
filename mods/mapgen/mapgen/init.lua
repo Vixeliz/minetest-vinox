@@ -23,7 +23,7 @@ minetest.register_alias("mapgen_cobble", "vinox_core:cobble")
 -- Optional aliases for v6 (they all have fallback values in the engine)
 if minetest.settings:get_bool("devtest_v6_mapgen_aliases", false) then
 	minetest.register_alias("mapgen_gravel", "vinox_core:gravel")
-	minetest.register_alias("mapgen_desert_stone", "vinox_core:desert_stone")
+	minetest.register_alias("mapgen_desert_stone", "vinox_core:sandstone")
 	minetest.register_alias("mapgen_desert_sand", "vinox_core:desert_sand")
 	minetest.register_alias("mapgen_dirt_with_snow", "vinox_core:dirt_with_snow")
 	minetest.register_alias("mapgen_snowblock", "vinox_core:snowblock")
